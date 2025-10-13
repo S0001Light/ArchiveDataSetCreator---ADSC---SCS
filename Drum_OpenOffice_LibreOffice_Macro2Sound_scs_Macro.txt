@@ -1,0 +1,1621 @@
+sub Macro2Sound
+
+Dim SoundLct1 as String
+Dim SoundLct2 as String
+Dim SoundLct3 as String
+Dim SoundLct4 as String
+Dim SoundLct5 as String
+Dim SoundLct6 as String
+Dim SoundLct7 as String
+Dim SoundLct8 as String
+Dim SoundLct9 as String
+Dim SoundLct10 as String
+Dim SoundLct11 as String
+Dim SoundLct12 as String
+Dim SoundLct13 as String
+Dim SoundLct14 as String
+Dim SoundLct15 as String
+Dim SoundLct16 as String
+Dim SoundLct17 as String
+Dim SoundLct18 as String
+Dim SoundLct19 as String
+Dim SoundLct20 as String
+Dim SoundLct21 as String
+Dim SoundLct22 as String
+Dim SoundLct23 as String
+Dim SoundLct24 as String
+Dim SoundLct25 as String
+Dim SoundLct26 as String
+Dim SoundLct27 as String
+Dim SoundLct28 as String
+Dim SoundLct29 as String
+Dim SoundLct30 as String
+Dim SoundLct31 as String
+Dim SoundLct32 as String
+Dim SoundLct33 as String
+Dim SoundLct34 as String
+Dim SoundLct35 as String
+Dim SoundLct36 as String
+Dim SoundLct37 as String
+Dim SoundLct38 as String
+Dim SoundLct39 as String
+Dim SoundLct40 as String
+Dim SoundLct41 as String
+Dim SoundLct42 as String
+Dim SoundLct43 as String
+Dim SoundLct44 as String
+Dim SoundLct45 as String
+Dim SoundLct46 as String
+Dim SoundLct47 as String
+Dim SoundLct48 as String
+Dim SoundLct49 as String
+Dim SoundLct50 as String
+Dim SoundLct51 as String
+Dim SoundLct52 as String
+Dim SoundLct53 as String
+Dim SoundLct54 as String
+Dim SoundLct55 as String
+Dim SoundLct56 as String
+Dim SoundLct57 as String
+Dim SoundLct58 as String
+Dim SoundLct59 as String
+Dim SoundLct60 as String
+Dim SoundLct61 as String
+Dim SoundLct62 as String
+Dim SoundLct63 as String
+Dim SoundLct64 as String
+Dim SoundLct65 as String
+Dim SoundLct66 as String
+Dim SoundLct67 as String
+Dim SoundLct68 as String
+Dim SoundLct69 as String
+Dim SoundLct70 as String
+Dim SoundLct71 as String
+Dim SoundLct72 as String
+Dim SoundLct73 as String
+Dim SoundLct74 as String
+Dim SoundLct75 as String
+Dim SoundLct76 as String
+Dim SoundLct77 as String
+Dim SoundLct78 as String
+Dim SoundLct79 as String
+Dim SoundLct80 as String
+Dim SoundLct81 as String
+Dim SoundLct82 as String
+Dim SoundLct83 as String
+Dim SoundLct84 as String
+Dim SoundLct85 as String
+Dim SoundLct86 as String
+Dim SoundLct87 as String
+Dim SoundLct88 as String
+Dim SoundLct89 as String
+Dim SoundLct90 as String
+Dim SoundLct91 as String
+Dim SoundLct92 as String
+Dim SoundLct93 as String
+Dim SoundLct94 as String
+Dim SoundLct95 as String
+Dim SoundLct96 as String
+Dim SoundLct97 as String
+Dim SoundLct98 as String
+Dim SoundLct99 as String
+Dim SoundLct100 as String
+Dim SoundLct101 as String
+Dim SoundLct102 as String
+Dim SoundLct103 as String
+Dim SoundLct104 as String
+Dim SoundLct105 as String
+Dim SoundLct106 as String
+Dim SoundLct107 as String
+Dim SoundLct108 as String
+Dim SoundLct109 as String
+Dim SoundLct110 as String
+Dim SoundLct111 as String
+Dim SoundLct112 as String
+Dim SoundLct113 as String
+Dim SoundLct114 as String
+Dim SoundLct115 as String
+Dim SoundLct116 as String
+Dim SoundLct117 as String
+Dim SoundLct118 as String
+Dim SoundLct119 as String
+Dim SoundLct120 as String
+Dim SoundLct121 as String
+Dim SoundLct122 as String
+Dim SoundLct123 as String
+Dim SoundLct124 as String
+Dim SoundLct125 as String
+Dim SoundLct126 as String
+Dim SoundLct127 as String
+Dim SoundLct128 as String
+Dim Sound as Object
+Dim Sheet as Object
+Dim Player as Object
+Dim one as String
+Dim two as String
+Dim three as String
+Dim four as String
+
+one = 1
+two = 2
+three = 3
+four = 4
+
+Sheet = ThisComponent.CurrentController.ActiveSheet
+
+Dim I
+###"com.sun.star.media.Manager_GStreamer"###for_Linux_Thinking###
+Sound = CreateUnoService("com.sun.star.media.Manager_DirectX")
+
+If Sheet.getCellRangeByName("C1").string = one Then
+SoundLct1 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\001.wav")
+Player = Sound.createPlayer(SoundLct1)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("C1").string = two Then
+For I = 0 To 1
+SoundLct2 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\001.wav")
+Player = Sound.createPlayer(SoundLct2)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C1").string = three Then
+For I = 0 To 2
+SoundLct3 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\001.wav")
+Player = Sound.createPlayer(SoundLct3)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C1").string = four Then
+For I = 0 To 3
+SoundLct4 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\001.wav")
+Player = Sound.createPlayer(SoundLct4)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C2").string = one Then
+SoundLct5 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\002.wav")
+Player = Sound.createPlayer(SoundLct5)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("C2").string = two Then
+For I = 0 To 1
+SoundLct6 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\002.wav")
+Player = Sound.createPlayer(SoundLct6)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C2").string = three Then
+For I = 0 To 2
+SoundLct7 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\002.wav")
+Player = Sound.createPlayer(SoundLct7)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C2").string = four Then
+For I = 0 To 3
+SoundLct8 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\002.wav")
+Player = Sound.createPlayer(SoundLct8)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C3").string = one Then
+SoundLct9 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\003.wav")
+Player = Sound.createPlayer(SoundLct9)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("C3").string = two Then
+For I = 0 To 1
+SoundLct10 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\003.wav")
+Player = Sound.createPlayer(SoundLct10)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C3").string = three Then
+For I = 0 To 2
+SoundLct11 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\003.wav")
+Player = Sound.createPlayer(SoundLct11)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C3").string = four Then
+For I = 0 To 3
+SoundLct12 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\003.wav")
+Player = Sound.createPlayer(SoundLct12)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C4").string = one Then
+SoundLct13 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\004.wav")
+Player = Sound.createPlayer(SoundLct13)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("C4").string = two Then
+For I = 0 To 1
+SoundLct14 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\004.wav")
+Player = Sound.createPlayer(SoundLct14)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C4").string = three Then
+For I = 0 To 2
+SoundLct15 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\004.wav")
+Player = Sound.createPlayer(SoundLct15)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C4").string = four Then
+For I = 0 To 3
+SoundLct16 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\004.wav")
+Player = Sound.createPlayer(SoundLct16)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C5").string = one Then
+SoundLct17 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\005.wav")
+Player = Sound.createPlayer(SoundLct17)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("C5").string = two Then
+For I = 0 To 1
+SoundLct18 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\005.wav")
+Player = Sound.createPlayer(SoundLct18)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C5").string = three Then
+For I = 0 To 2
+SoundLct19 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\005.wav")
+Player = Sound.createPlayer(SoundLct19)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C5").string = four Then
+For I = 0 To 3
+SoundLct20 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\005.wav")
+Player = Sound.createPlayer(SoundLct20)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C6").string = one Then
+SoundLct21 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\006.wav")
+Player = Sound.createPlayer(SoundLct21)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("C6").string = two Then
+For I = 0 To 1
+SoundLct22 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\006.wav")
+Player = Sound.createPlayer(SoundLct22)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C6").string = three Then
+For I = 0 To 2
+SoundLct23 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\006.wav")
+Player = Sound.createPlayer(SoundLct23)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("C6").string = four Then
+For I = 0 To 3
+SoundLct24 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\006.wav")
+Player = Sound.createPlayer(SoundLct24)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D1").string = one Then
+SoundLct25 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\007.wav")
+Player = Sound.createPlayer(SoundLct25)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("D1").string = two Then
+For I = 0 To 1
+SoundLct26 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\007.wav")
+Player = Sound.createPlayer(SoundLct26)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D1").string = three Then
+For I = 0 To 2
+SoundLct27 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\007.wav")
+Player = Sound.createPlayer(SoundLct27)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D1").string = four Then
+For I = 0 To 3
+SoundLct28 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\007.wav")
+Player = Sound.createPlayer(SoundLct28)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D2").string = one Then
+SoundLct29 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\008.wav")
+Player = Sound.createPlayer(SoundLct29)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("D2").string = two Then
+For I = 0 To 1
+SoundLct30 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\008.wav")
+Player = Sound.createPlayer(SoundLct30)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D2").string = three Then
+For I = 0 To 2
+SoundLct31 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\008.wav")
+Player = Sound.createPlayer(SoundLct31)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D2").string = four Then
+For I = 0 To 3
+SoundLct32 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\008.wav")
+Player = Sound.createPlayer(SoundLct32)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D3").string = one Then
+SoundLct33 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\009.wav")
+Player = Sound.createPlayer(SoundLct33)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("D3").string = two Then
+For I = 0 To 1
+SoundLct34 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\009.wav")
+Player = Sound.createPlayer(SoundLct34)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D3").string = three Then
+For I = 0 To 2
+SoundLct35 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\009.wav")
+Player = Sound.createPlayer(SoundLct35)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D3").string = four Then
+For I = 0 To 3
+SoundLct36 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\009.wav")
+Player = Sound.createPlayer(SoundLct36)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D4").string = one Then
+SoundLct37 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\010.wav")
+Player = Sound.createPlayer(SoundLct37)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("D4").string = two Then
+For I = 0 To 1
+SoundLct38 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\010.wav")
+Player = Sound.createPlayer(SoundLct38)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D4").string = three Then
+For I = 0 To 2
+SoundLct39 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\010.wav")
+Player = Sound.createPlayer(SoundLct39)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D4").string = four Then
+For I = 0 To 3
+SoundLct40 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\010.wav")
+Player = Sound.createPlayer(SoundLct40)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D5").string = one Then
+SoundLct41 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\011.wav")
+Player = Sound.createPlayer(SoundLct41)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("D5").string = two Then
+For I = 0 To 1
+SoundLct42 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\011.wav")
+Player = Sound.createPlayer(SoundLct42)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D5").string = three Then
+For I = 0 To 2
+SoundLct43 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\011.wav")
+Player = Sound.createPlayer(SoundLct43)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D5").string = four Then
+For I = 0 To 3
+SoundLct44 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\011.wav")
+Player = Sound.createPlayer(SoundLct44)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D6").string = one Then
+SoundLct45 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\012.wav")
+Player = Sound.createPlayer(SoundLct45)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("D6").string = two Then
+For I = 0 To 1
+SoundLct46 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\012.wav")
+Player = Sound.createPlayer(SoundLct46)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D6").string = three Then
+For I = 0 To 2
+SoundLct47 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\012.wav")
+Player = Sound.createPlayer(SoundLct47)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("D6").string = four Then
+For I = 0 To 3
+SoundLct48 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\012.wav")
+Player = Sound.createPlayer(SoundLct48)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E1").string = one Then
+SoundLct49 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\013.wav")
+Player = Sound.createPlayer(SoundLct49)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("E1").string = two Then
+For I = 0 To 1
+SoundLct50 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\013.wav")
+Player = Sound.createPlayer(SoundLct50)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E1").string = three Then
+For I = 0 To 2
+SoundLct51 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\013.wav")
+Player = Sound.createPlayer(SoundLct51)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E1").string = four Then
+For I = 0 To 3
+SoundLct52 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\013.wav")
+Player = Sound.createPlayer(SoundLct52)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E2").string = one Then
+SoundLct53 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\014.wav")
+Player = Sound.createPlayer(SoundLct53)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("E2").string = two Then
+For I = 0 To 1
+SoundLct54 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\014.wav")
+Player = Sound.createPlayer(SoundLct54)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E2").string = three Then
+For I = 0 To 2
+SoundLct55 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\014.wav")
+Player = Sound.createPlayer(SoundLct55)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E2").string = four Then
+For I = 0 To 3
+SoundLct56 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\014.wav")
+Player = Sound.createPlayer(SoundLct56)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E3").string = one Then
+SoundLct57 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\015.wav")
+Player = Sound.createPlayer(SoundLct57)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("E3").string = two Then
+For I = 0 To 1
+SoundLct58 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\015.wav")
+Player = Sound.createPlayer(SoundLct58)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E3").string = three Then
+For I = 0 To 2
+SoundLct59 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\015.wav")
+Player = Sound.createPlayer(SoundLct59)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E3").string = four Then
+For I = 0 To 3
+SoundLct60 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\015.wav")
+Player = Sound.createPlayer(SoundLct60)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E4").string = one Then
+SoundLct61 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\016.wav")
+Player = Sound.createPlayer(SoundLct61)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("E4").string = two Then
+For I = 0 To 1
+SoundLct62 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\016.wav")
+Player = Sound.createPlayer(SoundLct62)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E4").string = three Then
+For I = 0 To 2
+SoundLct63 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\016.wav")
+Player = Sound.createPlayer(SoundLct63)
+
+
+Player.start()
+Next I
+Else
+End if
+If Sheet.getCellRangeByName("E4").string = four Then
+For I = 0 To 3
+SoundLct64 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\016.wav")
+Player = Sound.createPlayer(SoundLct64)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E5").string = one Then
+SoundLct65 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\017.wav")
+Player = Sound.createPlayer(SoundLct65)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("E5").string = two Then
+For I = 0 To 1
+SoundLct66 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\017.wav")
+Player = Sound.createPlayer(SoundLct66)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E5").string = three Then
+For I = 0 To 2
+SoundLct67 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\017.wav")
+Player = Sound.createPlayer(SoundLct67)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E5").string = four Then
+For I = 0 To 3
+SoundLct68 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\017.wav")
+Player = Sound.createPlayer(SoundLct68)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E6").string = one Then
+SoundLct69 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\018.wav")
+Player = Sound.createPlayer(SoundLct69)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("E6").string = two Then
+For I = 0 To 1
+SoundLct70 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\018.wav")
+Player = Sound.createPlayer(SoundLct70)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E6").string = three Then
+For I = 0 To 2
+SoundLct71 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\018.wav")
+Player = Sound.createPlayer(SoundLct71)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("E6").string = four Then
+For I = 0 To 3
+SoundLct72 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\018.wav")
+Player = Sound.createPlayer(SoundLct72)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F1").string = one Then
+SoundLct73 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\019.wav")
+Player = Sound.createPlayer(SoundLct73)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("F1").string = two Then
+For I = 0 To 1
+SoundLct74 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\019.wav")
+Player = Sound.createPlayer(SoundLct74)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F1").string = three Then
+For I = 0 To 2
+SoundLct75 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\019.wav")
+Player = Sound.createPlayer(SoundLct75)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F1").string = four Then
+For I = 0 To 3
+SoundLct76 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\019.wav")
+Player = Sound.createPlayer(SoundLct76)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F2").string = one Then
+SoundLct77 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\020.wav")
+Player = Sound.createPlayer(SoundLct77)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("F2").string = two Then
+For I = 0 To 1
+SoundLct78 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\020.wav")
+Player = Sound.createPlayer(SoundLct78)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F2").string = three Then
+For I = 0 To 2
+SoundLct79 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\020.wav")
+Player = Sound.createPlayer(SoundLct79)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F2").string = four Then
+For I = 0 To 3
+SoundLct80 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\020.wav")
+Player = Sound.createPlayer(SoundLct80)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F3").string = one Then
+SoundLct81 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\021.wav")
+Player = Sound.createPlayer(SoundLct81)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("F3").string = two Then
+For I = 0 To 1
+SoundLct82 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\021.wav")
+Player = Sound.createPlayer(SoundLct82)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F3").string = three Then
+For I = 0 To 2
+SoundLct83 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\021.wav")
+Player = Sound.createPlayer(SoundLct83)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F3").string = four Then
+For I = 0 To 3
+SoundLct84 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\021.wav")
+Player = Sound.createPlayer(SoundLct84)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F4").string = one Then
+SoundLct85 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\022.wav")
+Player = Sound.createPlayer(SoundLct85)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("F4").string = two Then
+For I = 0 To 1
+SoundLct86 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\022.wav")
+Player = Sound.createPlayer(SoundLct86)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F4").string = three Then
+For I = 0 To 2
+SoundLct87 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\022.wav")
+Player = Sound.createPlayer(SoundLct87)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F4").string = four Then
+For I = 0 To 3
+SoundLct88 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\022.wav")
+Player = Sound.createPlayer(SoundLct88)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F5").string = one Then
+SoundLct89 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\023.wav")
+Player = Sound.createPlayer(SoundLct89)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("F5").string = two Then
+For I = 0 To 1
+SoundLct90 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\023.wav")
+Player = Sound.createPlayer(SoundLct90)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F5").string = three Then
+For I = 0 To 2
+SoundLct91 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\023.wav")
+Player = Sound.createPlayer(SoundLct91)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F5").string = four Then
+For I = 0 To 3
+SoundLct92 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\023.wav")
+Player = Sound.createPlayer(SoundLct92)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F6").string = one Then
+SoundLct93 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\024.wav")
+Player = Sound.createPlayer(SoundLct93)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("F6").string = two Then
+For I = 0 To 1
+SoundLct94 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\024.wav")
+Player = Sound.createPlayer(SoundLct94)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F6").string = three Then
+For I = 0 To 2
+SoundLct95 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\024.wav")
+Player = Sound.createPlayer(SoundLct95)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("F6").string = four Then
+For I = 0 To 3
+SoundLct96 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\024.wav")
+Player = Sound.createPlayer(SoundLct96)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G1").string = one Then
+SoundLct97 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\025.wav")
+Player = Sound.createPlayer(SoundLct97)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("G1").string = two Then
+For I = 0 To 1
+SoundLct98 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\025.wav")
+Player = Sound.createPlayer(SoundLct98)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G1").string = three Then
+For I = 0 To 2
+SoundLct99 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\025.wav")
+Player = Sound.createPlayer(SoundLct99)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G1").string = four Then
+For I = 0 To 3
+SoundLct100 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\025.wav")
+Player = Sound.createPlayer(SoundLct100)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G2").string = one Then
+SoundLct101 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\026.wav")
+Player = Sound.createPlayer(SoundLct101)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("G2").string = two Then
+For I = 0 To 1
+SoundLct102 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\026.wav")
+Player = Sound.createPlayer(SoundLct102)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G2").string = three Then
+For I = 0 To 2
+SoundLct103 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\026.wav")
+Player = Sound.createPlayer(SoundLct103)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G2").string = four Then
+For I = 0 To 3
+SoundLct104 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\026.wav")
+Player = Sound.createPlayer(SoundLct104)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G3").string = one Then
+SoundLct105 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\027.wav")
+Player = Sound.createPlayer(SoundLct105)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("G3").string = two Then
+For I = 0 To 1
+SoundLct106 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\027.wav")
+Player = Sound.createPlayer(SoundLct106)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G3").string = three Then
+For I = 0 To 2
+SoundLct107 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\027.wav")
+Player = Sound.createPlayer(SoundLct107)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G3").string = four Then
+For I = 0 To 3
+SoundLct108 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\027.wav")
+Player = Sound.createPlayer(SoundLct108)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G4").string = one Then
+SoundLct109 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\028.wav")
+Player = Sound.createPlayer(SoundLct109)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("G4").string = two Then
+For I = 0 To 1
+SoundLct110 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\028.wav")
+Player = Sound.createPlayer(SoundLct110)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G4").string = three Then
+For I = 0 To 2
+SoundLct111 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\028.wav")
+Player = Sound.createPlayer(SoundLct111)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G4").string = four Then
+For I = 0 To 3
+SoundLct112 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\028.wav")
+Player = Sound.createPlayer(SoundLct112)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G5").string = one Then
+SoundLct113 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\029.wav")
+Player = Sound.createPlayer(SoundLct113)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("G5").string = two Then
+For I = 0 To 1
+SoundLct114 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\029.wav")
+Player = Sound.createPlayer(SoundLct114)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G5").string = three Then
+For I = 0 To 2
+SoundLct115 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\029.wav")
+Player = Sound.createPlayer(SoundLct115)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G5").string = four Then
+For I = 0 To 3
+SoundLct116 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\029.wav")
+Player = Sound.createPlayer(SoundLct116)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G6").string = one Then
+SoundLct117 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\030.wav")
+Player = Sound.createPlayer(SoundLct117)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("G6").string = two Then
+For I = 0 To 1
+SoundLct118 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\030.wav")
+Player = Sound.createPlayer(SoundLct118)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G6").string = three Then
+For I = 0 To 2
+SoundLct119 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\030.wav")
+Player = Sound.createPlayer(SoundLct119)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("G6").string = four Then
+For I = 0 To 3
+SoundLct120 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\030.wav")
+Player = Sound.createPlayer(SoundLct120)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("H1").string = one Then
+SoundLct121 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\031.wav")
+Player = Sound.createPlayer(SoundLct121)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("H1").string = two Then
+For I = 0 To 1
+SoundLct122 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\031.wav")
+Player = Sound.createPlayer(SoundLct122)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("H1").string = three Then
+For I = 0 To 2
+SoundLct123 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\031.wav")
+Player = Sound.createPlayer(SoundLct123)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("H1").string = four Then
+For I = 0 To 3
+SoundLct124 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\031.wav")
+Player = Sound.createPlayer(SoundLct124)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("H2").string = one Then
+SoundLct125 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\032.wav")
+Player = Sound.createPlayer(SoundLct125)
+
+
+Player.start()
+Wait 100
+Else
+End If
+
+If Sheet.getCellRangeByName("H2").string = two Then
+For I = 0 To 1
+SoundLct126 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\032.wav")
+Player = Sound.createPlayer(SoundLct126)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("H2").string = three Then
+For I = 0 To 2
+SoundLct127 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\032.wav")
+Player = Sound.createPlayer(SoundLct127)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+
+If Sheet.getCellRangeByName("H2").string = four Then
+For I = 0 To 3
+SoundLct128 = ConvertToUrl("C:\(=locationOfflineFiles=)\Drums\032.wav")
+Player = Sound.createPlayer(SoundLct128)
+
+
+Player.start()
+Wait 100
+Next I
+Else
+End If
+msgbox "END OF SOUND SET", 7
+
+end sub

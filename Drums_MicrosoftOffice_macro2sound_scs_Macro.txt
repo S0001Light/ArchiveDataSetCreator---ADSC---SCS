@@ -1,0 +1,1284 @@
+#Did not write code from, found on a forum on the internet:
+If Win64 Then
+    Public Declare PtrSafe Function sndPlaySound32 Lib "winmm.dll" Alias "sndPlaySoundA" _
+           (ByVal lpszSoundName As String, ByVal uFlags As Long) As Long
+Else
+    Public Declare Function sndPlaySound32 Lib "winmm.dll" Alias "sndPlaySoundA" _
+                                           (ByVal lpszSoundName As String, ByVal uFlags As Long) As Long
+End If
+
+If VBA7 Then
+
+    Public Declare PtrSafe Sub Sleep Lib "kernel32" (ByVal Milliseconds As LongPtr)
+
+Else
+    Public Declare Sub Sleep Lib "kernel32" (ByVal Milliseconds As Long)
+End If
+#:To Here:
+
+Function macro2sound()
+Dim I
+For I = 1 To 10
+ActiveSheet.Select
+ActiveSheet.Copy After:= _
+Sheets(Sheets.Count)
+ActiveWindow.ScrollWorkbookTabs Position:=x1First
+Sheets("Number_List").Select
+Range("A1").Select
+Range("A1:B7").Select
+Selection.Copy
+ActiveWindow.ScrollWorkbookTabs Position:=x1Last
+Sheets(Sheets.Count).Select
+Range("A1").Select
+Range("A1:B7").Select
+ActiveSheet.Paste
+Application.CutCopyMode = False
+Range("A1").Select
+ActiveWorkbook.Sheets(Sheets.Count).Sort.SortFields.Clear
+ActiveWorkbook.Sheets(Sheets.Count).Sort.SortFields.Add Key:=Range("B1:B7")
+SortOn = x1SortOnValues
+Order = x1Ascending
+DataOption = x1SortNormal
+ActiveWorkbook.Sheets(Sheets.Count).Sort.SortFields.Add Key:=Range("A1:A7")
+SortOn = x1SortOnValues
+Order = x1Ascending
+DataOption = x1SortNormal
+With ActiveWorkbook.Sheets(Sheets.Count).Sort
+    .SetRange Range("A1:H7")
+    .Header = x1Guess
+    .MatchCase = False
+    .Apply
+End With
+
+Application.Run (macro1)
+
+If ActiveSheet.Range("B1").Value = "1" And _
+ActiveSheet.Range("B2").Value = "2" And _
+ActiveSheet.Range("B3").Value = "3" And _
+ActiveSheet.Range("B4").Value = "4" And _
+ActiveSheet.Range("B5").Value = "5" And _
+ActiveSheet.Range("B6").Value = "6" Then
+    End
+    End If
+    Next I
+End Function
+Function macro1()
+Dim I
+For I = 0 To 1
+    Application.Run (macro2)
+    Application.Run (macro3)
+    Application.Run (macro4)
+    Application.Run (macro5)
+    Application.Run (macro6)
+    Application.Run (macro7)
+    Application.Run (macro8)
+    Application.Run (macro9)
+    Application.Run (macro10)
+    Application.Run (macro11)
+    Application.Run (macro12)
+    Application.Run (macro13)
+    Application.Run (macro14)
+    Application.Run (macro15)
+    Application.Run (macro16)
+    Application.Run (macro17)
+    Application.Run (macro18)
+    Application.Run (macro19)
+    Application.Run (macro20)
+    Application.Run (macro21)
+    Application.Run (macro22)
+    Application.Run (macro23)
+    Application.Run (macro24)
+    Application.Run (macro25)
+    Application.Run (macro26)
+    Application.Run (macro27)
+    Application.Run (macro28)
+    Application.Run (macro29)
+    Application.Run (macro30)
+    Application.Run (macro31)
+    Application.Run (macro32)
+    Application.Run (macro33)
+    Application.Run (macro34)
+    Application.Run (macro35)
+    Application.Run (macro36)
+    Application.Run (macro37)
+    Application.Run (macro38)
+    Application.Run (macro39)
+    Application.Run (macro40)
+    Application.Run (macro41)
+    Application.Run (macro42)
+    Application.Run (macro43)
+    Application.Run (macro44)
+    Application.Run (macro45)
+    Application.Run (macro46)
+    Application.Run (macro47)
+    Application.Run (macro48)
+    Application.Run (macro49)
+    Application.Run (macro51)
+    Application.Run (macro52)
+    Application.Run (macro53)
+    Application.Run (macro54)
+    Application.Run (macro55)
+    Application.Run (macro56)
+    Application.Run (macro57)
+    Application.Run (macro58)
+    Application.Run (macro59)
+    Application.Run (macro60)
+    Application.Run (macro61)
+    Application.Run (macro62)
+    Application.Run (macro63)
+    Application.Run (macro64)
+    Application.Run (macro65)
+    Application.Run (macro66)
+    Application.Run (macro67)
+    Application.Run (macro68)
+    Application.Run (macro69)
+    Application.Run (macro70)
+    Application.Run (macro71)
+    Application.Run (macro72)
+    Application.Run (macro73)
+    Application.Run (macro74)
+    Application.Run (macro75)
+    Application.Run (macro76)
+    Application.Run (macro77)
+    Application.Run (macro78)
+    Application.Run (macro79)
+    Application.Run (macro80)
+    Application.Run (macro81)
+    Application.Run (macro82)
+    Application.Run (macro83)
+    Application.Run (macro84)
+    Application.Run (macro85)
+    Application.Run (macro86)
+    Application.Run (macro87)
+    Application.Run (macro88)
+    Application.Run (macro89)
+    Application.Run (macro90)
+    Application.Run (macro91)
+    Application.Run (macro92)
+    Application.Run (macro93)
+    Application.Run (macro94)
+    Application.Run (macro95)
+    Application.Run (macro96)
+    Application.Run (macro97)
+    Application.Run (macro98)
+    Application.Run (macro99)
+    Application.Run (macro100)
+    Application.Run (macro101)
+    Application.Run (macro102)
+    Application.Run (macro103)
+    Application.Run (macro104)
+    Application.Run (macro105)
+    Application.Run (macro106)
+    Application.Run (macro107)
+    Application.Run (macro108)
+    Application.Run (macro109)
+    Application.Run (macro110)
+    Application.Run (macro111)
+    Application.Run (macro112)
+    Application.Run (macro113)
+    Application.Run (macro114)
+    Application.Run (macro115)
+    Application.Run (macro116)
+    Application.Run (macro117)
+    Application.Run (macro118)
+    Application.Run (macro119)
+    Application.Run (macro120)
+    Application.Run (macro121)
+    Application.Run (macro122)
+    Application.Run (macro123)
+    Application.Run (macro124)
+    Application.Run (macro125)
+    Application.Run (macro126)
+    Application.Run (macro127)
+    Application.Run (macro128)
+    Application.Run (macro129)
+    Next I
+End Function
+Function macro2()
+If ActiveSheet.Range("C1") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\001.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro3()
+If ActiveSheet.Range("C1") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\001.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro4()
+If ActiveSheet.Range("C1") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\001.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro5()
+If ActiveSheet.Range("C1") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\001.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro6()
+If ActiveSheet.Range("C2") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\002.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro7()
+If ActiveSheet.Range("C2") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\002.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro8()
+If ActiveSheet.Range("C2") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\002.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro9()
+If ActiveSheet.Range("C2") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\002.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro10()
+If ActiveSheet.Range("C3") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\003.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro11()
+If ActiveSheet.Range("C3") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\003.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro12()
+If ActiveSheet.Range("C3") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\003.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro13()
+If ActiveSheet.Range("C3") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\003.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro14()
+If ActiveSheet.Range("C4") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\004.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro15()
+If ActiveSheet.Range("C4") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\004.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro16()
+If ActiveSheet.Range("C4") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\004.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro17()
+If ActiveSheet.Range("C4") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\004.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro18()
+If ActiveSheet.Range("C5") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\005.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro19()
+If ActiveSheet.Range("C5") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\005.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro20()
+If ActiveSheet.Range("C5") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\005.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro21()
+If ActiveSheet.Range("C5") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\005.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro22()
+If ActiveSheet.Range("C6") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\006.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro23()
+If ActiveSheet.Range("C6") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\006.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro24()
+If ActiveSheet.Range("C6") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\006.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro25()
+If ActiveSheet.Range("C6") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\006.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro26()
+If ActiveSheet.Range("D1") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\007.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro27()
+If ActiveSheet.Range("D1") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\007.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro28()
+If ActiveSheet.Range("D1") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\007.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro29()
+If ActiveSheet.Range("D1") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\007.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro30()
+If ActiveSheet.Range("D2") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\008.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro31()
+If ActiveSheet.Range("D2") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\008.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro32()
+If ActiveSheet.Range("D2") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\008.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro33()
+If ActiveSheet.Range("D2") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\008.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro34()
+If ActiveSheet.Range("D3") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\009.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro35()
+If ActiveSheet.Range("D3") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\009.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro36()
+If ActiveSheet.Range("D3") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\009.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro37()
+If ActiveSheet.Range("D3") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\009.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro38()
+If ActiveSheet.Range("D4") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\010.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro39()
+If ActiveSheet.Range("D4") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\010.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro40()
+If ActiveSheet.Range("D4") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\010.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro41()
+If ActiveSheet.Range("D4") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\010.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro42()
+If ActiveSheet.Range("D5") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\011.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro43()
+If ActiveSheet.Range("D5") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\011.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro44()
+If ActiveSheet.Range("D5") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\011.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro45()
+If ActiveSheet.Range("D5") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\011.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro46()
+If ActiveSheet.Range("D6") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\012.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro47()
+If ActiveSheet.Range("D6") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\012.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro48()
+If ActiveSheet.Range("D6") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\012.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro49()
+If ActiveSheet.Range("D6") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\012.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro50()
+If ActiveSheet.Range("E1") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\013.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro51()
+If ActiveSheet.Range("E1") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\013.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro52()
+If ActiveSheet.Range("E1") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\013.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro53()
+If ActiveSheet.Range("E1") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\013.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro54()
+If ActiveSheet.Range("E2") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\014.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro55()
+If ActiveSheet.Range("E2") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\014.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro56()
+If ActiveSheet.Range("E2") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\014.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro57()
+If ActiveSheet.Range("E2") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\014.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro58()
+If ActiveSheet.Range("E3") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\015.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro59()
+If ActiveSheet.Range("E3") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\015.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro60()
+If ActiveSheet.Range("E3") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\015.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro61()
+If ActiveSheet.Range("E3") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\015.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro62()
+If ActiveSheet.Range("E4") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\016.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro63()
+If ActiveSheet.Range("E4") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\016.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro64()
+If ActiveSheet.Range("E4") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\016.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro65()
+If ActiveSheet.Range("E4") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\016.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro66()
+If ActiveSheet.Range("E5") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\017.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro67()
+If ActiveSheet.Range("E5") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\017.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro68()
+If ActiveSheet.Range("E5") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\017.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro69()
+If ActiveSheet.Range("E5") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\017.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro70()
+If ActiveSheet.Range("E6") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\018.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro71()
+If ActiveSheet.Range("E6") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\018.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro72()
+If ActiveSheet.Range("E6") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\018.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro73()
+If ActiveSheet.Range("E6") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\018.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro74()
+If ActiveSheet.Range("F1") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\019.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro75()
+If ActiveSheet.Range("F1") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\019.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro76()
+If ActiveSheet.Range("F1") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\019.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro77()
+If ActiveSheet.Range("F1") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\019.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro78()
+If ActiveSheet.Range("F2") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\020.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro79()
+If ActiveSheet.Range("F2") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\020.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro80()
+If ActiveSheet.Range("F2") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\020.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro81()
+If ActiveSheet.Range("F2") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\020.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro82()
+If ActiveSheet.Range("F3") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\021.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro83()
+If ActiveSheet.Range("F3") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\021.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro84()
+If ActiveSheet.Range("F3") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\021.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro85()
+If ActiveSheet.Range("F3") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\021.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro86()
+If ActiveSheet.Range("F4") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\022.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro87()
+If ActiveSheet.Range("F4") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\022.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro88()
+If ActiveSheet.Range("F4") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\022.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro89()
+If ActiveSheet.Range("F4") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\022.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro90()
+If ActiveSheet.Range("F5") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\023.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro91()
+If ActiveSheet.Range("F5") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\023.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro92()
+If ActiveSheet.Range("F5") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\023.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro93()
+If ActiveSheet.Range("F5") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\023.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro94()
+If ActiveSheet.Range("F6") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\024.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro95()
+If ActiveSheet.Range("F6") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\024.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro96()
+If ActiveSheet.Range("F6") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\024.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro97()
+If ActiveSheet.Range("F6") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\024.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro98()
+If ActiveSheet.Range("G1") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\025.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro99()
+If ActiveSheet.Range("G1") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\025.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro100()
+If ActiveSheet.Range("G1") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\025.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro101()
+If ActiveSheet.Range("G1") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\025.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro102()
+If ActiveSheet.Range("G2") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\026.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro103()
+If ActiveSheet.Range("G2") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\026.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro104()
+If ActiveSheet.Range("G2") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\026.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro105()
+If ActiveSheet.Range("G2") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\026.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro106()
+If ActiveSheet.Range("G3") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\027.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro107()
+If ActiveSheet.Range("G3") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\027.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro108()
+If ActiveSheet.Range("G3") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\027.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro109()
+If ActiveSheet.Range("G3") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\027.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro110()
+If ActiveSheet.Range("G4") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\028.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro111()
+If ActiveSheet.Range("G4") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\028.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro112()
+If ActiveSheet.Range("G4") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\028.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro113()
+If ActiveSheet.Range("G4") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\028.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro114()
+If ActiveSheet.Range("G5") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\029.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro115()
+If ActiveSheet.Range("G5") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\029.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro116()
+If ActiveSheet.Range("G5") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\029.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro117()
+If ActiveSheet.Range("G5") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\029.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro118()
+If ActiveSheet.Range("G6") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\030.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro119()
+If ActiveSheet.Range("G6") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\030.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro120()
+If ActiveSheet.Range("G6") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\030.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro121()
+If ActiveSheet.Range("G6") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\030.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro122()
+If ActiveSheet.Range("H1") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\031.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro123()
+If ActiveSheet.Range("H1") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\031.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro124()
+If ActiveSheet.Range("H1") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\031.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro125()
+If ActiveSheet.Range("H1") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\031.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro126()
+If ActiveSheet.Range("H2") = 1 Then
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\032.wav", 0)
+Else
+Exit Function
+End If
+End Function
+Function macro127()
+If ActiveSheet.Range("H2") = 2 Then
+For I = 0 To 1
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\032.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro128()
+If ActiveSheet.Range("H2") = 3 Then
+For I = 0 To 2
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\032.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function
+Function macro129()
+If ActiveSheet.Range("H2") = 4 Then
+For I = 0 To 3
+    Call sndPlaySound32("C:\(=locationOfflineFiles=)\Drums\032.wav", 0)
+Next I
+Else
+Exit Function
+End If
+End Function

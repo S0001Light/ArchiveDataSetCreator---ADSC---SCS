@@ -1,0 +1,110 @@
+sub Macro0a
+
+dim args2(0) as new com.sun.star.beans.PropertyValue
+args2(0).Name = "Nr"
+args2(0).Value = 1
+
+dim args3(0) as new com.sun.star.beans.PropertyValue
+args3(0).Name = "ToPoint"
+args3(0).Value = "A1:B25"
+
+dim args5(0) as new com.sun.star.beans.PropertyValue
+args5(0).Name = "Nr"
+
+dim args6(0) as new com.sun.star.beans.PropertyValue
+args6(0).Name = "ToPoint"
+args6(0).Value = "A1:B25"
+
+dim args8(0) as new com.sun.star.beans.PropertyValue
+args8(0).Name = "ToPoint"
+args8(0).Value = "A1"
+
+dim args9(0) as new com.sun.star.beans.PropertyValue
+args9(0).Name = "ToPoint"
+args9(0).Value = "A1:AA25"
+
+dim args10(10) as new com.sun.star.beans.PropertyValue
+args10(0).Name = "ByRows"
+args10(0).Value = true
+args10(1).Name = "HasHeader"
+args10(1).Value = false
+args10(2).Name = "CaseSensitive"
+args10(2).Value = false
+args10(3).Name = "NaturalSort"
+args10(3).Value = true
+args10(4).Name = "IncludeAttribs"
+args10(4).Value = true
+args10(5).Name = "UserDefIndex"
+args10(5).Value = 0
+args10(6).Name = "Col1"
+args10(6).Value = 2
+args10(7).Name = "Ascending1"
+args10(7).Value = true
+args10(8).Name = "Col1"
+args10(8).Value = 1
+args10(9).Name = "Ascending1"
+args10(9).Value = false
+
+rem ----------------------------------------------------------------------
+rem define variables
+dim document   as object
+dim dispatcher as object
+rem ----------------------------------------------------------------------
+rem get access to the document
+document   = ThisComponent.CurrentController.Frame
+dispatcher = createUnoService("com.sun.star.frame.DispatchHelper")
+
+Dim I
+For I = 1 to 25 step 1
+rem ----------------------------------------------------------------------
+Dim oDoc as Object
+Dim oPage as Integer
+Dim oSheet
+Dim TheSum as Integer
+Dim SUM
+oDoc = ThisComponent
+oPage = oDoc.CurrentController.ActiveSheet.Name
+TheSum = 1 + oPage
+oSheets = oDoc.Sheets
+oDoc.Sheets.copyByName(oPage, TheSum, oSheets.count)
+
+rem ----------------------------------------------------------------------
+
+
+dispatcher.executeDispatch(document, ".uno:JumpToTable", "", 0, args2())
+
+rem ----------------------------------------------------------------------
+
+dispatcher.executeDispatch(document, ".uno:GoToCell", "", 0, args3())
+
+rem ----------------------------------------------------------------------
+dispatcher.executeDispatch(document, ".uno:Copy", "", 0, Array())
+
+rem ----------------------------------------------------------------------
+
+Dim j as Integer
+Dim oRange
+oRange = thisComponent.getSheets.getCount
+j = oRange
+args5(0).Value = j
+
+dispatcher.executeDispatch(document, ".uno:JumpToTable", "", 0, args5())
+
+rem ----------------------------------------------------------------------
+
+dispatcher.executeDispatch(document, ".uno:GoToCell", "", 0, args6())
+
+rem ----------------------------------------------------------------------
+dispatcher.executeDispatch(document, ".uno:Paste", "", 0, Array())
+
+rem ----------------------------------------------------------------------
+
+dispatcher.executeDispatch(document, ".uno:GoToCell", "", 0, args9())
+
+rem ----------------------------------------------------------------------
+
+dispatcher.executeDispatch(document, ".uno:DataSort", "", 0, args10())
+
+Next I
+
+end sub

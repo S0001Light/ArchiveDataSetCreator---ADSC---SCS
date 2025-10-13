@@ -1,0 +1,55 @@
+
+
+sub MacroLostNotToLose_Finals
+
+rem ----------------------------------------------------------------------
+rem define variables
+dim document   as object
+dim dispatcher as object
+rem ----------------------------------------------------------------------
+rem get access to the document
+document   = ThisComponent.CurrentController.Frame
+dispatcher = createUnoService("com.sun.star.frame.DispatchHelper")
+rem ----------------------------------------------------------------------
+dim oDoc as Object
+dim oSheet as Object
+dim args1(0) as new com.sun.star.beans.PropertyValue
+dim args2(0) as new com.sun.star.beans.PropertyValue
+dim args3 as String
+dim args5(0) as new com.sun.star.beans.PropertyValue
+dim args7(0) as new com.sun.star.beans.PropertyValue
+args1(0).Name = "ToPoint"
+args1(0).Value = "A1:D1"
+args2(0).Name = "ToPoint"
+args2(0).Value = "A1"
+args3 = "0"
+oDoc = ThisComponent
+oSheets = oDoc.getSheets()
+oSheet = oSheets.getByName(args3)
+Dim I
+For I = 1 to 25 Step 1
+If args4 <= 25 Then args4 = args4 + 1
+
+args5(0).Name = "ToPoint"
+args5(0).Value = "A" + args4 + ":" + "D" + args4
+If args6 <= 25 Then args6 = args6 + 1
+
+args7(0).Name = "Nr"
+args7(0).Value = args6
+rem ----------------------------------------------------------------------
+dispatcher.executeDispatch(document, ".uno:JumpToTable", "", 0, args7())
+rem ----------------------------------------------------------------------
+dispatcher.executeDispatch(document, ".uno:GoToCell", "", 0, args1())
+rem ----------------------------------------------------------------------
+dispatcher.executeDispatch(document, ".uno:Copy", "", 0, Array())
+rem ----------------------------------------------------------------------
+oDoc.getCurrentController().setActiveSheet(oSheet)
+rem ----------------------------------------------------------------------
+dispatcher.executeDispatch(document, ".uno:GoToCell", "", 0, args5())
+rem ----------------------------------------------------------------------
+dispatcher.executeDispatch(document, ".uno:Paste", "", 0, Array())
+rem ----------------------------------------------------------------------
+
+Next I
+
+end sub

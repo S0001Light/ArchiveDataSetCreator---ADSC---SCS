@@ -1,0 +1,76 @@
+#macro for Choose Macro File
+
+Sub theMacro()
+
+    Dim I
+    For I = 1 To Worksheets("Choose").Range("E4").Value
+    ActiveSheet.Select
+    ActiveSheet.Copy After:= _
+    Sheets(Sheets.Count)
+    ActiveWindow.ScrollWorkbookTabs Position:=xlFirst
+    Sheets(Worksheets("Choose").Range("E28").Value).Select
+    Range("A1").Select
+    Range(Worksheets("Choose").Range("E20").Value).Select
+    Selection.Copy
+    ActiveWindow.ScrollWorkbookTabs Position:=xlLast
+    Sheets(Sheets.Count).Select
+    Range("A1").Select
+    Range(Worksheets("Choose").Range("E20").Value).Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range(Worksheets("Choose").Range("E8").Value).Select
+    ActiveWorkbook.Sheets(Sheets.Count).Sort.SortFields.Clear
+    ActiveWorkbook.Sheets(Sheets.Count).Sort.SortFields.Add Key:=Range( _
+        Worksheets("Choose").Range("E16").Value), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:= _
+        xlSortNormal
+    ActiveWorkbook.Sheets(Sheets.Count).Sort.SortFields.Add Key:=Range( _
+        Worksheets("Choose").Range("E12").Value), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:= _
+        xlSortNormal
+    With ActiveWorkbook.Sheets(Sheets.Count).Sort
+        .SetRange Range(Worksheets("Choose").Range("E24").Value)
+        .Header = xlGuess
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+    Next I
+End Sub
+
+#run like openoffice LibreOffice macro below
+
+Sub Macro3()
+    Dim I
+    For I = 1 To 26
+    ActiveSheet.Select
+    ActiveSheet.Copy After:= _
+    Sheets(Sheets.Count)
+    ActiveWindow.ScrollWorkbookTabs Position:=xlFirst
+    Sheets("Number_List").Select
+    Range("A1").Select
+    Range("A1:B28").Select
+    Selection.Copy
+    ActiveWindow.ScrollWorkbookTabs Position:=xlLast
+    Sheets(Sheets.Count).Select
+    Range("A1").Select
+    Range("A1:B28").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("A28").Select
+    ActiveWorkbook.Sheets(Sheets.Count).Sort.SortFields.Clear
+    ActiveWorkbook.Sheets(Sheets.Count).Sort.SortFields.Add Key:=Range( _
+        "B1:B28"), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:= _
+        xlSortNormal
+    ActiveWorkbook.Sheets(Sheets.Count).Sort.SortFields.Add Key:=Range( _
+        "A1:A28"), SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:= _
+        xlSortNormal
+    With ActiveWorkbook.Sheets(Sheets.Count).Sort
+        .SetRange Range("A1:AY28")
+        .Header = xlGuess
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+    Next I
+End Sub
