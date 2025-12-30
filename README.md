@@ -19,7 +19,7 @@ Does also rearrange word but not like my python file, in column to column. can u
 And, to get the sound to work, you must use replace where the .wav file is located. ((GStreamer for linux, and DirectX for Windows)must be used for OpenOffice and LibreOffice), and use your favorite stereo mix computer audio program to record...
 
 
-In Excel, you must lower the security settings as well.
+In Microsoft Excel 2003, 2007, 2010, you must lower the security settings as well.
 
 Also, works the same as all the above.
 
