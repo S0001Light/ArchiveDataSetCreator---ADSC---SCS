@@ -11,3 +11,4 @@ And, to get the sound to work, you must use replace where the .wav file is locat
 
 In Excel, you must lower the security settings as well.
 Also, works the same as all the above.
+Except, Microsoft Excel does background color rearrange where as the openOffice and LibreOffice do not
