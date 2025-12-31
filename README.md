@@ -18,6 +18,7 @@ Does also rearrange word but not like my python file, in column to column. can u
 
 And, to get the sound to work, you must use replace where the .wav file is located. ((GStreamer for linux, and DirectX for Windows)must be used for OpenOffice and LibreOffice), and use your favorite stereo mix computer audio program to record...
 
+Also, for macro2sound, use a 1, a 2, 3, or 4 in each cell in range C1:H8, can also run with ADSC rearrange, by placing macro2sound() before Next I, in the basic code.
 
 In Microsoft Excel 2003, 2007, 2010, you must lower the security settings as well.
 
