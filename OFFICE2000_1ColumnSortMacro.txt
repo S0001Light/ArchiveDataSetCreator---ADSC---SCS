@@ -1,0 +1,22 @@
+Sub MacroA1()
+    Dim I
+    For I = 1 To 20
+    ActiveSheet.Select
+    ActiveSheet.Copy After:= _
+    Sheets(Sheets.Count)
+    ActiveWindow.ScrollWorkbookTabs Position:=xlFirst
+    Sheets("Number_List").Select
+    Range("A1").Select
+    Range("A1:B51").Select
+    Selection.Copy
+    ActiveWindow.ScrollWorkbookTabs Position:=xlLast
+    Sheets(Sheets.Count).Select
+    Range("A1").Select
+    Range("A1:B51").Select
+    ActiveSheet.Paste
+    Application.CutCopyMode = False
+    Range("A1:BA51").Select
+    Selection.Sort Key1:=Range("A1"), Order1:=xlAscending, Header:=xlGuess, _
+        OrderCustom:=1, MatchCase:=False, Orientation:=xlTopToBottom
+    Next I
+End Sub
